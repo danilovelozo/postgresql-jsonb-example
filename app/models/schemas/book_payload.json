@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+  "required": [ "title", "publisher", "published_date", "authors" ],
+  "properties": {
+    "title": { "type": "string" },
+    "publisher": { "type": "string" },
+    "published_date": { "type": "string" },
+    "authors": {
+      "type": "array",
+      "items": {
+        "$ref": "authors.json#/definitions/data"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  }
+}
